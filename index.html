@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+	<head>
+		<title> jQuery Mobile Boilerplate </title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+
+		<!-- Home screen icon  Mathias Bynens mathiasbynens.be/notes/touch-icons -->
+		<!-- For iPhone 4 with high-resolution Retina display: -->
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon.png">
+		<!-- For first-generation iPad: -->
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon.png">
+		<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+		<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+		<!-- For nokia devices and desktop browsers : -->
+		<link rel="shortcut icon" href="favicon.ico" />
+
+		<!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+		<meta http-equiv="cleartype" content="on">
+
+		<!-- jQuery Mobile CSS bits -->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css" />
+
+		<!-- Custom css -->
+		<link rel="stylesheet" href="css/custom.css" />
+
+		<!-- Javascript includes -->
+		<script src="js/jquery-1.10.2.js"></script>
+		<script src="js/mobileinit.js"></script>
+		<script src="js/ios-orientationchange-fix.min.js"></script>
+		<script src="js/jquery.mobile-1.4.0.js"></script>
+		<script src="js/application.js"></script>
+		<!-- Startup Images for iDevices -->
+		<script>
+			(function() {
+				var a;
+				if (navigator.platform === "iPad") {
+					a = window.orientation !== 90 || window.orientation === -90 ? "images/startup-tablet-landscape.png" : "images/startup-tablet-portrait.png"
+				} else {
+					a = window.devicePixelRatio === 2 ? "images/startup-retina.png" : "images/startup.png"
+				}
+				document.write('<link rel="apple-touch-startup-image" href="' + a + '"/>')
+			})()
+		</script>
+		<!-- The script prevents links from opening in mobile safari. https://gist.github.com/1042026 -->
+		<script>
+			(function(a, b, c) {
+				if ( c in b && b[c]) {
+					var d,
+					    e = a.location,
+					    f = /^(a|html)$/i;
+					a.addEventListener("click", function(a) {
+						d = a.target;
+						while (!f.test(d.nodeName))
+						d = d.parentNode;
+						"href" in d && (d.href.indexOf("http") || ~d.href.indexOf(e.host)) && (a.preventDefault(), e.href = d.href)
+					}, !1)
+				}
+			})(document, window.navigator, "standalone")
+		</script>
+		<style>
+			a{
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div data-role="page" style="text-shadow:none; background:url('images/bg12.jpg')  no-repeat center;-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;">
+
+			<div data-role="content" style="text-align: center;  padding-top:50px; background: none">
+
+				<img src="images/deywuro.png" style="margin-bottom: 50px;"/>
+				<div class="login-form" style=" padding: 45px;text-align: center; font-family: 'Roboto', sans-serif; outline: 0;background: none;">
+					<input type="text" placeholder="username" style="height: 50px;width: 100%;border:none; font-weight: bolder;padding-left: 10px;color: gray;background: white;"/>
+					<br />
+					<input type="password" placeholder="password" style="height: 50px;width: 100%;border:none; font-weight: bolder;padding-left: 10px;color: gray;background: white;"/>
+					<br />
+					<br />
+					<a href="menu.html" rel="external">
+					<button class="ui-btn" id="btnLogin" style="background: #f7ba4f;width: 100%;height: 40px;border:1px solid #f7ba4f; color:white;font-weight: bolder">
+						login
+					</button></a>
+					<p class="message" style="color :#f7ba4f; font-weight: bolder;">
+						Not registered? <a href="#"  style="color: white;text-decoration: none;">Join Us</a>
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>
