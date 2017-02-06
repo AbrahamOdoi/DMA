@@ -13,6 +13,7 @@
 						console.log("===> " + phone.type + "  " + phone.number + " (" + phone.normalizedNumber + ")");
 					}
 					alert(contactName);
+					alert('yes');
 				}
 			}, function(error) {
 				console.error(error);
