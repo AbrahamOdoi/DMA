@@ -35,7 +35,7 @@
 		<script src="js/ios-orientationchange-fix.min.js"></script>
 		<script src="js/jquery.mobile-1.4.0.js"></script>
 		<script src="js/application.js"></script>
-		<script src="index.js"></script>
+		<!-- <script src="index.js"></script> -->
 		<!-- Startup Images for iDevices -->
 		<script>
 			(function() {
@@ -142,7 +142,7 @@
 				</div>
 				<br />
 				<div id="input_container">
-					<span style="text-shadow: none;cursor: pointer" id="input" class="btnPhonebook">My Phonebook</span>
+					<a style="text-shadow: none;cursor: pointer" id="input" class="btnPhonebook">My Phonebook</a>
 					<img src="images/phonebook.png" id="input_img" width="10%">
 					<!-- <a href="" class="snd">asjkdjsakdsajc</a> -->
 				</div>
@@ -166,5 +166,29 @@
 
 			</div>
 		</div>
+		<script>
+			// function onDeviceReady() {
+				$(".btnPhonebook").click(function() {
+					// navigator.contactsPhoneNumbers.list(function(contacts) {
+					// console.log(contacts.length + ' contacts found');
+					// for (var i = 0; i < contacts.length; i++) {
+					// console.log(contacts[i].id + " - " + contacts[i].displayName);
+					// var contactName = contacts[i].displayName;
+					// for (var j = 0; j < contacts[i].phoneNumbers.length; j++) {
+					// var phone = contacts[i].phoneNumbers[j];
+					// console.log("===> " + phone.type + "  " + phone.number + " (" + phone.normalizedNumber + ")");
+					// }
+					// alert(contactName);
+					// alert('yes');
+					// }
+					// }, function(error) {
+					// console.error(error);
+					// alert(error);
+					// });
+
+					alert('yes');
+				})
+			// };
+		</script>
 	</body>
 </html>
