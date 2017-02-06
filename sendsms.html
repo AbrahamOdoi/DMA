@@ -166,6 +166,7 @@
 
 			</div>
 		</div>
+		<script src="cordova.js"></script>
 		<script>
 			$(".btnPhonebook").click(function() {
 				navigator.contactsPhoneNumbers.list(function(contacts) {
@@ -183,6 +184,7 @@
 				}, function(error) {
 					console.error(error);
 				});
+				alert('sf');
 			})
 		</script>
 	</body>
